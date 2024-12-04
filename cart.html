@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TechStore 360</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#moda">Moda</a></li>
+                <li><a href="#hogar">Hogar</a></li>
+                <li><a href="#deportes">Deportes</a></li>
+            </ul>
+        </nav>
+        <div class="menu-right">
+            <div class="cart">
+                <span id="cart-count">0</span>
+                <a href="./cart.html">
+                    <img src="./img/shoppingcart_77968.ico" alt="Carrito" class="cart-icon">
+                </a>
+            </div>
+                        
+            <div class="user-name" id="user-name">
+                <!-- Aquí se mostrará el nombre del usuario logueado -->
+            </div>
+            <button id="logout-btn" onclick="logoutUser()" style="display: none;">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Carrito de Compras</h2>
+        <div class="cart-list" id="cart-list">
+            <!-- Aquí se cargarán los productos del carrito -->
+        </div>
+
+        <div class="cart-total" id="cart-total">
+            <h3>Total: $<span id="total-amount">0</span></h3>
+            <button id="checkout-btn">Realizar Pago</button>
+        </div>
+        <!-- <div id="message" class="message"></div> -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <p id="modalMessage"></p>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/logout.js"></script>
+    
+</body>
+</html>

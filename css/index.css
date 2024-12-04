@@ -1,0 +1,404 @@
+/* Estilos globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1E1E1E;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación fija */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E1E1E;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #FA6E00, #E60026);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Estilos del menú */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FA6E00;
+}
+
+/* Ajuste del carrito */
+.cart {
+    position: relative;
+    margin-right: 40px;
+    display: inline-block;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #E60026;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+}
+
+/* Menu derecho */
+.menu-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    color: white;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+button {
+    background: linear-gradient(90deg, #FA6E00, #E60026);
+    color: #1E1E1E;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e14e4e;
+}
+
+/* Icono de menú para pantallas pequeñas */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Oculta el menú por defecto */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-right {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    /* Activa el menú al hacer clic */
+    .nav-active nav ul {
+        display: flex;
+    }
+
+    /* Ajuste del carrito y nombre de usuario */
+    .cart {
+        margin-right: 20px;
+    }
+
+    .user-name {
+        font-size: 16px;
+    }
+
+    /* Ajuste de los botones */
+    button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+/* Estilos para la sección de landing */
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.cta-left {
+    display: flex; /* Habilita Flexbox en el contenedor */
+    flex-direction: column; /* Organiza los hijos en columna */
+    align-items: center; /* Alinea los hijos horizontalmente al centro */
+    justify-content: center; /* Asegura la alineación vertical */
+    width: 50%; /* Ajusta el ancho si es necesario */
+}
+
+.cta-left h2 {
+    font-size: 2rem;
+    margin: 0 0 20px 0; /* Agrega espacio inferior entre el título y el botón */
+    text-align: center; /* Centra el texto si es necesario */
+}
+.cta-btn {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #FA6E00, #E60026);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(250, 110, 0, 0.4);
+}
+
+/* Responsividad en móviles */
+@media (max-width: 768px) {
+    .landing {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-left {
+        width: 100%;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+    }
+}
+
+/* Ajuste del carrusel */
+.carousel-container {
+    width: 90%;
+    height: 510px; /* Ajusta esta altura según lo que desees */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background-color: inherit; /* Mantener el fondo del contenedor igual al de la página */
+}
+
+/* Elementos del carrusel */
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imágenes dentro de los items */
+.carousel-item img {
+    width: 80%; /* Las imágenes serán un poco más pequeñas, ajusta el valor como desees */
+    height: 80%;
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Imagen activa */
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* Controles de navegación */
+.carousel-control {
+    position: absolute;
+    top: 50%; /* Centra los botones verticalmente */
+    transform: translateY(-50%); /* Ajusta el centrado exacto */
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Controles prev y next del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    border-radius: 50%; /* Forma redondeada */
+    border: 1px solid rgba(255, 255, 255, 0.7); /* Borde delicado */
+    padding: 10px;
+    transition: all 0.3s ease; /* Transición suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para las imágenes de los controles */
+.carousel-control img {
+    width: 20px; /* Tamaño más pequeño para los íconos */
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en los controles */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al hover */
+    transform: scale(1.2); /* Efecto de aumentar ligeramente el tamaño */
+    border-color: rgba(255, 255, 255, 0.9); /* Borde más visible */
+}
+
+/* Posiciones específicas de los botones */
+.carousel-control-prev {
+    left: 20px; /* Alinea el botón "prev" a la izquierda */
+}
+
+.carousel-control-next {
+    right: 20px; /* Alinea el botón "next" a la derecha */
+}
+
+
+/* Efecto al pasar el cursor */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurecimiento suave */
+    transform: scale(1.1); /* Efecto de aumento ligero */
+    border-color: rgba(255, 255, 255, 0.9); /* Borde más visible al hacer hover */
+}
+
+.carousel-control img {
+    width: 50px; 
+}
+
+
+/* Sección de productos */
+.category-list {
+    display: flex;
+    justify-content: center; /* Centra el contenedor de las tarjetas horizontalmente */
+    padding: 50px 0; /* Espaciado superior e inferior */
+}
+
+.category-list, h2{
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center; /* Centra las tarjetas dentro del contenedor */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+    padding: 0 20px; /* Espaciado a los lados */
+}
+
+.product-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 200px;
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+    overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%; /* Asegura que la imagen llene todo el ancho del contenedor */
+    height: 150px; /* Altura fija para uniformar las imágenes */
+    object-fit: cover; /* Ajusta la imagen al contenedor sin deformarse */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.add-to-cart {
+    padding: 10px 15px;
+    background-color: #E60026;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(230, 0, 38, 0.4);
+}

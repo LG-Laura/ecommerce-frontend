@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore 360</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TechStore 360</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#" data-category="inicio">Inicio</a></li>
+                <li><a href="#" data-category="tecnologia">Tecnología</a></li>
+                <li><a href="#" data-category="moda">Moda</a></li>
+                <li><a href="#" data-category="hogar">Hogar</a></li>
+                <li><a href="#" data-category="deportes">Deportes</a></li>
+                <li id="login-menu-item"><a href="./login.html">Login</a></li>
+            </ul>
+            </ul>
+        </nav>
+        <div class="menu-right">
+            <div class="cart">
+                <span id="cart-count">0</span>
+                <a href="./cart.html">
+                    <img src="./img/shoppingcart_77968.ico" alt="Carrito" class="cart-icon">
+                </a>
+            </div>
+                        
+            <div class="user-name" id="user-name">
+                <!-- Aquí se mostrará el nombre del usuario logueado -->
+            </div>
+            <button id="logout-btn" onclick="logoutUser()" style="display: none;">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de inicio -->
+        <section id="inicio" class="landing">
+            <div class="cta-left">
+                <h2>Descubre lo último en tecnología</h2>
+                <button class="cta-btn">¡Compra Ahora!</button>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="../ecomerce-backend/uploads/imgAppleWatch.png" alt="Producto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../ecomerce-backend/uploads/imgLaptopDell.png" alt="Producto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../ecomerce-backend/uploads/imgAuricularSony.png" alt="Producto 3">
+                    </div>
+                </div>
+
+                <!-- Controles de navegación con imágenes -->
+                <button class="carousel-control prev" onclick="prevSlide()">
+                    <img src="./img/go_prev_icon.ico" alt="Prev">
+                </button>
+                <button class="carousel-control next" onclick="nextSlide()">
+                    <img src="./img/go_next_icon.ico" alt="Next">
+                </button>
+            </div>            
+        </section>
+
+        <!-- Sección dinámica de productos por categoría -->
+        <section id="category-products" class="category-list">
+            <h2 id="category-title" ></h2>
+            <div id="products-container" class="product-list">
+            <!-- Aquí se llenarán los productos seleccionados por categoría -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 TechStore 360. Todos los derechos reservados.</p>
+            <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+        </div>
+    </footer>
+    
+
+    <script src="./js/main.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/product.js"></script>
+       
+</body>
+</html>

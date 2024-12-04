@@ -1,0 +1,148 @@
+:root {
+    --color-bright-gray: #E9EBF3;
+    --color-black: #000000;
+    --color-light-gray: #a7a7a7;
+    --color-dark-gray: #444;
+    --color-red: #9F2828;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-bright-gray);
+}
+
+.body {
+    background-color: var(--color-black);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.body h1 {
+    color: var(--color-light-gray);
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 1.9em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-light-gray);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-black);
+    color: var(--color-light-gray);
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.continue-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-red);
+    color: var(--color-light-gray);
+    font-weight: bold; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.continue-button:hover {
+    background-color: var(--color-dark-gray);
+}
+
+.register-group {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.register-group label {
+    color: var(--color-light-gray);
+    margin-right: 15px;
+}
+
+.register-link {
+    color: var(--color-light-gray);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Mantener el modal en la misma posición */
+    z-index: 1; /* Asegurarse de que el modal esté en la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgb(0,0,0); /* Fondo negro */
+    background-color: rgba(0,0,0,0.4); /* Fondo negro con opacidad */
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centrando el modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Máximo ancho del modal */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilo para el botón de cerrar */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Cambiar color al pasar el mouse sobre el botón de cerrar */
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .body {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+
+    .continue-button {
+        padding: 8px;
+    }
+}
