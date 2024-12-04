@@ -32,4 +32,4 @@ Aquí tienes una barra horizontal con enlaces a la documentación oficial de las
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ---
 
-¡Ahora estás listo para ejecutar el proyecto y explorar la API de comercio electrónico! Si tienes alguna pregunta o problema, no dudes en abrir un [issue](https://github.com/tu-repositorio/issues) en el repositorio.
+¡Ahora puedes acceder a la página desde qui: [Link](https://ecommerce-frontend-cade.onrender.com/) en el repositorio.
