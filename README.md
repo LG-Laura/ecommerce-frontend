@@ -1,17 +1,17 @@
 # Proyecto de Comercio Electrónico
 
-Este proyecto es una aplicación de comercio electrónico desarrollada utilizando  **HTML**, **CSS**, **JavaScript**, y **LocalStorage** para simular funcionalidades de backend. La página no solo muestra una lista de productos, sino que también sugiere productos basados en el comportamiento de navegación del usuario. En el futuro, se integrará un backend completo y se añadirán más funcionalidades. 
+Este proyecto es una aplicación de comercio electrónico desarrollada utilizando  **HTML**, **CSS**, **JavaScript**. Está integrada con un backend completo.
 
-La documentación de la API, cuando se implemente el backend, se manejará con **Swagger**. A continuación, se presentan las instrucciones para configurar y ejecutar el proyecto.
 
 ## 🚀 Funcionalidades Principales
 
-- Registro e inicio de sesión de usuarios utilizando **LocalStorage**.
+- Registro e inicio de sesión de usuarios.
+- Usuario Administrador
+- Dashboard para administrar, productos, clientes, etc.
 - Visualización de productos disponibles con la opción de agregar productos al carrito.
 - Sugerencias de productos basadas en la navegación del usuario.
 - Carrito de compras dinámico con actualización en tiempo real de la cantidad de productos.
-- Persistencia de los datos de usuarios y carrito utilizando **LocalStorage**.
-- **Futuro**: Integración con un backend utilizando **Node.js**, **MySQL**.
+- Persistencia de los datos de usuarios y carrito.
 
 
 
