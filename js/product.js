@@ -24,7 +24,7 @@ document.querySelectorAll('nav a').forEach(menuItem => {
 
 // Función para cargar productos por categoría
 function loadProductsByCategory(category) {
-    fetch('http://localhost:5000/api/products/productosPorCategoria')
+    fetch('https://ecommerce-backend-vevb.onrender.com/api/products/productosPorCategoria')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al obtener categorías');
