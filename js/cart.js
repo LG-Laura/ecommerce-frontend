@@ -17,7 +17,7 @@ function loadCart() {
 
     // Si el usuario está logueado, obtener los productos de la base de datos
     if (userId) {
-        fetch(`http://localhost:5000/api/users/${userId}/cart`, {
+        fetch(`https://ecommerce-backend-cade.onrender.com/api/users/${userId}/cart`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -104,7 +104,7 @@ async function addToCart(productId) {
 
     const userId = localStorage.getItem('userId');
     try {
-        const productResponse = await fetch(`http://localhost:5000/api/products/${productId}`);
+        const productResponse = await fetch(`https://ecommerce-backend-cade.onrender.com/api/products/${productId}`);
         if (!productResponse.ok) throw new Error('Producto no encontrado.');
 
         const product = await productResponse.json();
@@ -127,7 +127,7 @@ async function addToCart(productId) {
         localStorage.setItem('cart', JSON.stringify(cart));
 
         // Sincronizar con el backend
-        await fetch(`http://localhost:5000/api/users/${userId}/cart`, {
+        await fetch(`https://ecommerce-backend-cade.onrender.com/api/users/${userId}/cart`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -155,7 +155,7 @@ function logoutUser() {
             cantidad: item.quantity
         }));
 
-        fetch(`http://localhost:5000/api/users/${userId}/cart`, {
+        fetch(`https://ecommerce-backend-cade.onrender.com/api/users/${userId}/cart`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -223,7 +223,7 @@ function removeFromCart(productId) {
     // Sincronizar con el backend
     const userId = localStorage.getItem('userId');
     if (userId) {
-        fetch(`http://localhost:5000/api/users/${userId}/cart/${productId}`, {
+        fetch(`https://ecommerce-backend-cade.onrender.com/api/users/${userId}/cart/${productId}`, {
             method: 'DELETE',
             headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         }).catch(error => console.error('Error al eliminar del backend:', error));
@@ -276,7 +276,7 @@ function proceedToPayment() {
     const totalAmount = calculateTotal(cart);
 
     if (cart.length > 0) {
-        fetch('http://localhost:5000/api/payment', {
+        fetch('https://ecommerce-backend-cade.onrender.com/api/payment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -42,7 +42,7 @@ closeFormBtn.addEventListener('click', () => {
 // Cargar productos
 async function cargarProductos() {
   try {
-    const response = await fetch('http://localhost:5000/api/products/all', {
+    const response = await fetch('https://ecommerce-backend-cade.onrender.com/api/products/all', {
       headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
     });
 
@@ -75,7 +75,7 @@ async function cargarProductos() {
 // Cargar categorías
 async function cargarCategorias() {
   try {
-    const response = await fetch('http://localhost:5000/api/products/categorias', {
+    const response = await fetch('https://ecommerce-backend-cade.onrender.com/api/products/categorias', {
       headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
     });
 
@@ -109,8 +109,8 @@ productForm.addEventListener('submit', async (event) => {
 
   try {
     const url = editProductId 
-      ? `http://localhost:5000/api/products/${editProductId}`
-      : `http://localhost:5000/api/products`;
+      ? `https://ecommerce-backend-cade.onrender.com/api/products/${editProductId}`
+      : `https://ecommerce-backend-cade.onrender.com/api/products`;
 
     const response = await fetch(url, {
       method: editProductId ? 'PUT' : 'POST',
@@ -135,7 +135,7 @@ productForm.addEventListener('submit', async (event) => {
 // Función para editar producto
 async function editarProducto(id) {
   try {
-    const response = await fetch(`http://localhost:5000/api/products/${id}`, {
+    const response = await fetch(`https://ecommerce-backend-cade.onrender.com/api/products/${id}`, {
       headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
     });
 
@@ -163,7 +163,7 @@ async function editarProducto(id) {
 async function eliminarProducto(id) {
   if (confirm('¿Estás seguro de que deseas eliminar este producto?')) {
     try {
-      const response = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const response = await fetch(`https://ecommerce-backend-cade.onrender.com/api/products/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
@@ -195,7 +195,7 @@ function logoutUser() {
 document.getElementById('searchInput').addEventListener('input', async function () {
   const searchTerm = this.value.toLowerCase();
   try {
-    const response = await fetch(`http://localhost:5000/api/products/search?query=${searchTerm}`, {
+    const response = await fetch(`https://ecommerce-backend-cade.onrender.com/api/products/search?query=${searchTerm}`, {
       headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
     });
 

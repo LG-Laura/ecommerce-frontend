@@ -15,7 +15,7 @@ function registerUser() {
     };
 
     // Hacer la solicitud POST a la API de registro
-    fetch('http://localhost:5000/api/auth/registro', { // Cambia el puerto si es necesario
+    fetch('https://ecommerce-backend-cade.onrender.com/api/auth/registro', { // Cambia el puerto si es necesario
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ function loginUser() {
 
     const loginData = { email, password };
 
-    fetch('http://localhost:5000/api/auth/login', {
+    fetch('https://ecommerce-backend-cade.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function saveCart(userId, token) {
     try {
-        await fetch(`http://localhost:5000/api/users/${userId}/cart`, {
+        await fetch(`https://ecommerce-backend-cade.onrender.com/api/users/${userId}/cart`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
