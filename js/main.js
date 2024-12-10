@@ -52,7 +52,7 @@ function updateCartCount() {
 
 // Función para cargar productos por categoría
 function loadProductsByCategory(category) {
-    fetch('https://ecommerce-backend-cade.onrender.com/products/productosPorCategoria')
+    fetch('https://ecommerce-backend-cade.onrender.com/api/products/productosPorCategoria')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al obtener categorías');
