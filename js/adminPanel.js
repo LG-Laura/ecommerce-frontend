@@ -109,8 +109,8 @@ productForm.addEventListener('submit', async (event) => {
 
   try {
     const url = editProductId 
-      ? `https://ecommerce-backend-cade.onrender.com/api/products/${editProductId}`
-      : `https://ecommerce-backend-cade.onrender.com/api/products`;
+      ? `https://ecommerce-backend-vevb.onrender.com/api/products/${editProductId}`
+      : `https://ecommerce-backend-vevb.onrender.com/api/products`;
 
     const response = await fetch(url, {
       method: editProductId ? 'PUT' : 'POST',
@@ -135,7 +135,7 @@ productForm.addEventListener('submit', async (event) => {
 // Función para editar producto
 async function editarProducto(id) {
   try {
-    const response = await fetch(`https://ecommerce-backend-cade.onrender.com/api/products/${id}`, {
+    const response = await fetch(`https://ecommerce-backend-vevb.onrender.com/api/products/${id}`, {
       headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
     });
 
