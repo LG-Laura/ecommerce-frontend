@@ -402,3 +402,69 @@ button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(230, 0, 38, 0.4);
 }
+
+/* Estilo general para el footer */
+footer {
+    background-color: #1E1E1E;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Contenido del footer */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-content a {
+    color: #FA6E00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #E60026;
+}
+
+/* Responsividad para tabletas */
+@media (max-width: 768px) {
+    .footer-content p {
+        font-size: 0.9rem;
+    }
+    
+    .footer-content a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 480px) {
+    footer {
+        padding: 15px 5px;
+    }
+
+    .footer-content p {
+        font-size: 0.8rem;
+    }
+
+    .footer-content a {
+        font-size: 0.8rem;
+    }
+}
+
